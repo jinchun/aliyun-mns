@@ -1,0 +1,23 @@
+{
+    "name": "jinchun/aliyun-mns",
+    "description": "阿里云官方 MNS，composer 方式维护",
+    "authors": [
+        {
+            "name": "jinchun",
+            "email": "imjinchun@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "friendsofphp/php-cs-fixer": "^1.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "AliyunMNS\\": "src/"
+        }
+    }
+}
