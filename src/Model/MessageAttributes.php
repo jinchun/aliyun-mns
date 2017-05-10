@@ -11,30 +11,37 @@ use AliyunMNS\Constants;
  */
 class MessageAttributes
 {
-    private $mailAttributes;
+    // if both SmsAttributes and BatchSmsAttributes are set, only one will take effect
+    private $attributes;
 
     public function __construct(
-        $mailAttributes = null)
+        $attributes = null)
     {
-        $this->mailAttributes = $mailAttributes;
+        $this->attributes = $attributes;
     }
 
-    public function setMailAttributes($mailAttributes)
+    public function setAttributes($attributes)
     {
-        $this->mailAttributes = $mailAttributes;
+        $this->attributes = $attributes;
     }
 
-    public function getMailAttributes()
+    public function getAttributes()
     {
-        return $this->mailAttributes;
+        return $this->attributes;
     }
 
     public function writeXML(\XMLWriter $xmlWriter)
     {
-        if ($this->mailAttributes != null) {
-            $xmlWriter->startELement(Constants::MESSAGE_ATTRIBUTES);
-            $this->mailAttributes->writeXML($xmlWriter);
-            $xmlWriter->endElement();
+        $xmlWriter->startELement(Constants::MESSAGE_ATTRIBUTES);
+        if ($this->attributes != null) {
+            if (is_array($this->attributes)) {
+                foreach ($this->attributes as $subAttributes) {
+                    $subAttributes->writeXML($xmlWriter);
+                }
+            } else {
+                $this->attributes->writeXML($xmlWriter);
+            }
         }
+        $xmlWriter->endElement();
     }
 }

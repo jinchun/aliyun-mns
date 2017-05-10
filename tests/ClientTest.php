@@ -62,7 +62,7 @@ class ClientTest extends TestCase
             $this->client->setAccountAttributes($attributes);
             $res = $this->client->getAccountAttributes();
             $this->assertTrue($res->isSucceed());
-            $this->assertNull($res->getAccountAttributes()->getLoggingBucket());
+            $this->assertSame('', strval($res->getAccountAttributes()->getLoggingBucket()));
         } catch (MnsException $e) {
             $this->assertSame($e->getMnsErrorCode(), Constants::INVALID_ARGUMENT);
         }

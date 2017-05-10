@@ -18,6 +18,8 @@ class Constants
     const CONTENT_TYPE   = 'Content-Type';
     const SECURITY_TOKEN = 'security-token';
     const DIRECT_MAIL    = 'DirectMail';
+    const DIRECT_SMS     = 'DirectSMS';
+    const WEBSOCKET      = 'WebSocket';
 
     // XML Tag
     const ERROR                    = 'Error';
@@ -50,6 +52,11 @@ class Constants
     const ADDRESS_TYPE             = 'AddressType';
     const REPLY_TO_ADDRESS         = 'ReplyToAddress';
     const IS_HTML                  = 'IsHtml';
+    const FREE_SIGN_NAME           = 'FreeSignName';
+    const TEMPLATE_CODE            = 'TemplateCode';
+    const RECEIVER                 = 'Receiver';
+    const SMS_PARAMS               = 'SmsParams';
+    const IMPORTANCE_LEVEL         = 'ImportanceLevel';
 
     // some MNS ErrorCodes
     const INVALID_ARGUMENT     = 'InvalidArgument';

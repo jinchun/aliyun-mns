@@ -28,6 +28,13 @@ abstract class BaseResponse
         if ($isXml === false) {
             throw new MnsException($statusCode, $content);
         }
+        try {
+            while ($xmlReader->read()) {
+            }
+        } catch (\Exception $e) {
+            throw new MnsException($statusCode, $content);
+        }
+        $xmlReader->XML($content);
 
         return $xmlReader;
     }

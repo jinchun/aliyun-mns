@@ -65,6 +65,20 @@ class Topic
         return 'mail:directmail:' . $mailAddress;
     }
 
+    public function generateSmsEndpoint($phone = null)
+    {
+        if ($phone) {
+            return 'sms:directsms:' . $phone;
+        } else {
+            return 'sms:directsms:anonymous';
+        }
+    }
+
+    public function generateBatchSmsEndpoint()
+    {
+        return 'sms:directsms:anonymous';
+    }
+
     public function publishMessage(PublishMessageRequest $request)
     {
         $request->setTopicName($this->topicName);
