@@ -18,6 +18,6 @@ Please refer to http://www.aliyun.com/product/mns and  https://docs.aliyun.com/?
 
 
 
-目前版本 `1.3.2`，2016-11-03 更新。
+目前版本 `1.3.4`，2017-04-13 更新。
 
-附：[官方原版 SDK 下载地址](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/32381/cn_zh/1478166644841/aliyun-mns-php-sdk-1.3.2.zip?spm=5176.doc32381.2.1.738zG1&file=aliyun-mns-php-sdk-1.3.2.zip)
+附：[官方原版 SDK 下载地址](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/32381/cn_zh/1492071739024/aliyun-mns-php-sdk-1.3.4.zip?spm=5176.doc32381.2.2.EJ45Zh&file=aliyun-mns-php-sdk-1.3.4.zip)
